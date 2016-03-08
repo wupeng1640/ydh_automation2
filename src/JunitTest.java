@@ -19,17 +19,17 @@ public class JunitTest {
         System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
         driver = new ChromeDriver();
         loginPage=new LoginPage(driver);
-       // loginPage.get();
-       // loginPage.login("31000598","123456");
+//        loginPage.get();
+//        loginPage.login("31000598","123456");
 
     }
      @Test
     public void test(){
          loginPage.get();
-         enrollPage= loginPage.linkPage();
-         enrollPage.cc();
+         //enrollPage= loginPage.linkPage();
+         //enrollPage.cc();
 
-         //loginPage.login("310005098","123456");
+         loginPage.login("310005098","123456");
      }
     @After
     public void tearDown(){
