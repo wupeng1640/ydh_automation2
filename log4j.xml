@@ -3,9 +3,9 @@
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
     <appender name="fileAppender" class="org.apache.log4j.FileAppender">
         <param name="Threshold" value="INFO" />
-        <param name="File" value="percent_calculator.log"/>
+        <param name="File" value="ydh_automation2_test.log"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}  [%c] (%t:%x) %m%n" />
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}  [%c] [%p] (%t:%x) %m%n" />
         </layout>
     </appender>
     <root>

@@ -38,7 +38,7 @@ public class log4j_demo
         driver.findElement(By.id("username")).clear();  logger.info("清除易订货登录的用户名内容");
 
         // Click on Percent Calculators
-        driver.findElement(By.id("username")).sendKeys("310005098"); logger.info("输入登录账号");
+        driver.findElement(By.id("username")).sendKeys("310003502"); logger.info("输入登录账号");
 
         logger.info("# # # # # # # # # # # # # # # # # # # # # # # # # # # ");
 
