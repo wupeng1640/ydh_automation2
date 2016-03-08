@@ -14,8 +14,8 @@ public class JunitTest {
     //BasePage basePage=new BasePage();
     LoginPage loginPage;
     EnrollPage1 enrollPage;
-   // EnrollPage2 enrollPage2;
-   // EnrollSuccessPage enrollSuccessPage;
+    EnrollPage2 enrollPage2;
+    EnrollSuccessPage enrollSuccessPage;
 
     //public static Logger logger = LogManager.getLogger(JunitTest.class.getName());
     @Before
@@ -23,7 +23,7 @@ public class JunitTest {
         DOMConfigurator.configure("log4j.xml");//日志运行的配置文件
         System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
         driver = new ChromeDriver();
-        //driver=new FirefoxDriver();
+        driver.manage().window().maximize();//浏览器窗口最大化
         loginPage = new LoginPage(driver);
 //        loginPage.get();
 //        loginPage.login("31000598","123456");
@@ -33,6 +33,7 @@ public class JunitTest {
 
     @Test
     public void test() throws InterruptedException {
+        System.out.println(driver.getTitle());
         enrollPage = loginPage.linkPage();
         enrollPage.firstSubmit("18600011111");
         //enrollSuccessPage = enrollPage2.secondSubmit("测试的--公司", "联系人", "123456", "12345678@qq.com");

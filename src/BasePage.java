@@ -14,7 +14,7 @@ import java.security.PrivateKey;
  * Created by Administrator on 2016/3/7.
  */
 public class BasePage {
-    static WebDriver driver=null;
+    WebDriver driver=null;
     Tool tool=new Tool();
     public static Logger logger = LogManager.getLogger(JunitTest.class.getName());
     public WebDriver driver() {
@@ -158,7 +158,7 @@ class EnrollSuccessPage extends BasePage{
     public void LinkAdminPage() throws InterruptedException {
         registerToUseBtn.click();
         Thread.sleep(5000);
-        tool.switchToWindow("我的工作台", driver);
+       tool.switchToWindow("我的工作台", driver);
     }
 
 }
