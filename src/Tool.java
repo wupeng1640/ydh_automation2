@@ -19,6 +19,24 @@ import java.sql.PreparedStatement;
  *         Created by Administrator on 2016/1/29.
  */
 public class Tool {
+    WebDriver driver = null;
+    public String baseUrl;
+    boolean acceptNextAlert = true;
+    StringBuffer verificationErrors = new StringBuffer();
+
+    //构造方法
+    public Tool() {
+        driver = new FirefoxDriver();
+    }
+
+    //启动浏览器
+    public void setUp(int browers) throws Exception {
+        driver.manage().window().maximize();//浏览器窗口最大化
+        baseUrl = "https://sso.dinghuo123.com/login?service=ydh-web";
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.get(baseUrl);
+    }
+
     //窗口切换
     /*说明：调用该方法时只需要把需要切换的大窗口的标题放入到，和当前的driver
     * 例如 this.switchToWindow("易订货登录首页",driver)
