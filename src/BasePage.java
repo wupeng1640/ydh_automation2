@@ -14,12 +14,14 @@ import java.security.PrivateKey;
  * Created by Administrator on 2016/3/7.
  */
 public class BasePage {
-    static WebDriver driver=null;
-    Tool tool=new Tool();
+    static WebDriver driver = null;
+    Tool tool = new Tool();
     public static Logger logger = LogManager.getLogger(JunitTest.class.getName());
+
     public WebDriver driver() {
         return driver;
     }
+
     public void close() {
         driver.close();
     }
@@ -35,13 +37,17 @@ class LoginPage extends BasePage {
     private WebElement findPassworld;
     @FindBy(xpath = "//*[@id=\"myForm\"]/div/div[7]/div/div/a")
     private WebElement enroll;
+
     public LoginPage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     public void get() {
-        driver.get("https://sso.dinghuo123.com/login?service=ydh-web"); logger.info(" # # # 进入易订货登录页面 # # # ");
+        driver.get("https://sso.dinghuo123.com/login?service=ydh-web");
+        logger.info(" # # # 进入易订货登录页面 # # # ");
     }
+
     public void login(String UserName, String PassWorld) {
         username.clear();
         username.sendKeys(UserName);
@@ -56,10 +62,11 @@ class LoginPage extends BasePage {
         String title = driver.getTitle();
         if (title.equals("我的工作台"))
             logger.info(" # # # 成功登录到易订货管理端 # # # ");
-        else if(title.equals("在线订货平台"))
+        else if (title.equals("在线订货平台"))
             logger.info(" # # # 成功登录到易订货订货端 # # # ");
         else logger.error(" # # #登录失败 # # #");
     }
+
     //链接到注册页面方法
     public EnrollPage1 linkPage() {
         enroll.click();
@@ -68,14 +75,15 @@ class LoginPage extends BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if(driver.getTitle().equals("注册免费订货系统|移动订货|分销订货－易订货｜移动订货系统第１品牌"))
+        if (driver.getTitle().equals("注册免费订货系统|移动订货|分销订货－易订货｜移动订货系统第１品牌"))
             logger.info(" # # # 成功进入易订货注册页面 # # # ");
         else logger.error(" # # # 从登录页面跳转到注册页面失败 # # # ");
         EnrollPage1 enrollPage = new EnrollPage1(driver);
         return enrollPage;
     }
 }
-//注册页面
+
+//注册页面1
 class EnrollPage1 extends BasePage {
     @FindBy(id = "username")
     private WebElement username1;
@@ -87,6 +95,9 @@ class EnrollPage1 extends BasePage {
     private WebElement verfCode;
     @FindBy(xpath = "//*[@id=\"validateCodeForm\"]/div[4]/div/label/a")
     private WebElement backLoginPage;
+    @FindBy(xpath = "//*[@id=\"registerForm\"]/div[1]/div/span/span/span[3]")
+    private WebElement judgeMobile;
+
     public EnrollPage1(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -108,13 +119,19 @@ class EnrollPage1 extends BasePage {
         DBread db = new DBread(mobile);
         String activecode = db.getActiveCode(mobile);
         mobileVerfyCode.sendKeys(activecode);
-        btn_register.click();
-        Thread.sleep(5000);
-        EnrollPage2 enrollPage2=new EnrollPage2(driver);
+        if (judgeMobile.getText().equals("用户名重复"))
+            logger.error(" # # # 输入的手机号码已经被注册 # # # ");
+        else {
+            btn_register.click();
+            logger.info("# # # " + mobile + "已用于注册易订货系统 # # #");
+            Thread.sleep(5000);
+        }
+        EnrollPage2 enrollPage2 = new EnrollPage2(driver);
         return enrollPage2;
     }
 }
-class EnrollPage2 extends BasePage{
+//注册页面2
+class EnrollPage2 extends BasePage {
     private WebElement companyName;
     private WebElement linkman;
     private WebElement password;
@@ -127,38 +144,50 @@ class EnrollPage2 extends BasePage{
     //邀请码
     @FindBy(xpath = "//*[@id=\"writeInforForm\"]/div[6]/div/a")
     private WebElement openRecommendCode;
-    private  WebElement recommendCode;
+    private WebElement recommendCode;
     @FindBy(xpath = "//*[@id=\"writeInforForm\"]/div[9]/div/label/a")
     private WebElement backLoginPage;
+
     public EnrollPage2(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public EnrollSuccessPage  secondSubmit(String companyname,String linkname,String passWord,String Email) throws InterruptedException {
+
+    public EnrollSuccessPage secondSubmit(String companyname, String linkname, String passWord, String Email) throws InterruptedException {
         companyName.sendKeys(companyname);
         linkman.sendKeys(linkname);
         password.sendKeys(passWord);
         email.sendKeys(Email);
         btn_register2.click();
         Thread.sleep(5000);
-        String assertTarget=driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div[1]/p[2]")).getText();
-        System.out.println(assertTarget);
-        EnrollSuccessPage enrollSuccessPage=new EnrollSuccessPage(driver);
+        String assertTarget = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div/div[2]/div[1]/p[2]")).getText();
+        if (assertTarget.equals("恭喜您开通了5用户，终身免费的易订货免费服务！您同时也成为贵公司的易订货系统管理员。")) {
+            logger.info(" # # # 注册易订货账号成功 # # # ");
+        }else{
+            logger.error(" # # # 注册易订货失败  # # # ");
+        }
+        EnrollSuccessPage enrollSuccessPage = new EnrollSuccessPage(driver);
         return enrollSuccessPage;
     }
 }
-class EnrollSuccessPage extends BasePage{
-    private  WebElement registerToUseBtn;//进入易订货系统按钮
+//注册成功页面
+class EnrollSuccessPage extends BasePage {
+    private WebElement registerToUseBtn;//进入易订货系统按钮
     @FindBy(xpath = "//*[@id=\"loginForm\"]/div/div[2]/div[1]/p[2]")
-    private  WebElement assertTarget;
-    public EnrollSuccessPage(WebDriver driver){
-        this.driver=driver;
+    private WebElement assertTarget;
+
+    public EnrollSuccessPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
     public void LinkAdminPage() throws InterruptedException {
         registerToUseBtn.click();
         Thread.sleep(5000);
         tool.switchToWindow("我的工作台", driver);
+        if (driver.getTitle().equals("我的工作台")) {
+            logger.info(" # # # 成功通过注册进入易订货系统管理端 # # # ");
+        }
+        else logger.error(" # # # 注册流程进入易订货失败 # # # ");
     }
-
 }
