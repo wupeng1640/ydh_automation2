@@ -7,6 +7,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 
 import java.io.FileInputStream;
+import java.text.DecimalFormat;
 
 public class Q11 {
 
@@ -33,14 +34,14 @@ public class Q11 {
                         HSSFCell cell = childSheet.getRow(r).getCell(c);
                         System.out.println("cell:: " + cell);
                         String value = null;
-
                         if (cell == null)
                             continue;
-                        System.out.println("cell.getCellType():: " + cell.getCellType());
+                     //   System.out.println("cell.getCellType():: " + cell.getCellType());
                         switch (cell.getCellType()) {
 
                             case HSSFCell.CELL_TYPE_NUMERIC:
-                                value = "" + cell.getNumericCellValue();
+                                DecimalFormat df = new DecimalFormat("0");
+                                value = df.format(cell.getNumericCellValue());
                                 break;
 
                             case HSSFCell.CELL_TYPE_STRING:
@@ -50,7 +51,7 @@ public class Q11 {
                                 break;
                             default:
                         }
-                        System.out.println("value :: " + value);
+                        System.out.println("value ---:: " + value);
                     }
                 }
             }

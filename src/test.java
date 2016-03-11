@@ -1,7 +1,7 @@
 public class test{
     public static void main (String[] args) throws Exception {
-        Excelutils excelutils=new Excelutils();
-        String  adata=excelutils.getStringData ("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",2,2);
+        Tool excelutils=new Tool();
+        String  adata=excelutils.getExeclData ("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",1,1);
         System.out.println(adata);
     }
 }

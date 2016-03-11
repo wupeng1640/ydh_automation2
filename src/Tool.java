@@ -1,10 +1,12 @@
 import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -25,6 +27,38 @@ import org.apache.poi.xssf.usermodel.*;
  *         Created by Administrator on 2016/1/29.
  */
 public class Tool {
+
+
+    String value = null;
+    //用来获取execl的数据，参数说明，Path：文件路径，SheetName：工作表名称 ，rowNumb：数据所在行数，cellNumb：数据所在列数
+    //数据驱动测试使用的方法
+    public String getExeclData(String Path, String SheetName, int rowNumb, int cellNumb) throws Exception {
+        try {
+            HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(Path));
+            HSSFSheet childSheet = workbook.getSheet(SheetName);
+            HSSFRow row = childSheet.getRow(rowNumb);
+            HSSFCell cell = row.getCell(cellNumb);
+            //HSSFCell cell = childSheet.getRow(rowNumb).getCell(lineNumb);
+            switch (cell.getCellType()) {
+                case HSSFCell.CELL_TYPE_NUMERIC:
+                    DecimalFormat df = new DecimalFormat("0");
+                    value = df.format(cell.getNumericCellValue());
+                    break;
+                case HSSFCell.CELL_TYPE_STRING:
+                    value = cell.getStringCellValue();
+                    break;
+                case HSSFCell.CELL_TYPE_BLANK:
+                    break;
+                case HSSFCell.CELL_TYPE_ERROR:
+                    break;
+                default:
+            }
+            return value;
+        } catch (Exception e) {
+            System.out.println("所去数据的在Excel中的位置坐标设置错位，请确认！！！！");
+            throw (e);
+        }
+    }
     //窗口切换
     /*说明：调用该方法时只需要把需要切换的大窗口的标题放入到，和当前的driver
     * 例如 this.switchToWindow("易订货登录首页",driver)
@@ -58,7 +92,6 @@ public class Tool {
         }
         return flag;
     }
-
 
     //随机生成一个字符串（主要用于新增一些内容时 使用）
     public String getRandomString(int length) {
@@ -145,53 +178,4 @@ class DBread {
 }
 
 
-class Excelutils {
-    private XSSFSheet ExcelWSheet;
-    private XSSFWorkbook ExcelWBook;
 
-    //Constructor to connect to the Excel with sheetname and Path
-    public String  getStringData(String Path, String SheetName,int lineNumb,int rowNumb) throws Exception {
-        try {
-            // Open the Excel file
-            FileInputStream ExcelFile = new FileInputStream(Path);
-            // Access the required test data sheet
-
-            ExcelWSheet = ExcelWBook.getSheet(SheetName);
-            //HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(Path));
-            //HSSFSheet ExcelWSheet = workbook.getSheetAt(0);
-
-
-
-
-            XSSFCell cell = ExcelWSheet.getRow(rowNumb).getCell(lineNumb);
-            String data=cell.getStringCellValue();
-            return data;
-        } catch (Exception e) {
-            throw (e);
-        }
-    }
-
-
-    //This method to get the data and get the value as strings.
-    public String getCellDataasstring(int RowNum, int ColNum) throws Exception {
-        try {
-            String CellData = ExcelWSheet.getRow(RowNum).getCell(ColNum).getStringCellValue();
-            System.out.println("The value of CellData " + CellData);
-            return CellData;
-        } catch (Exception e) {
-            return "Errors in Getting Cell Data";
-        }
-    }
-
-
-    //This method to get the data and get the value as number.
-    public double getCellDataasnumber(int RowNum, int ColNum) throws Exception {
-        try {
-            double CellData = ExcelWSheet.getRow(RowNum).getCell(ColNum).getNumericCellValue();
-            System.out.println("The value of CellData " + CellData);
-            return CellData;
-        } catch (Exception e) {
-            return 000.00;
-        }
-    }
-}

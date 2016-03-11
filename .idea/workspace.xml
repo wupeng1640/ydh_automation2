@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ae44414-bb39-444b-974f-255e992f0f9c" name="Default" comment="2016-3-9  18:11  enroll is ok！">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Q11.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/BasePage.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/BasePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/DBread.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/DBread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/EnrollPage1.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/EnrollPage1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/EnrollPage2.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/EnrollPage2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/EnrollSuccessPage.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/EnrollSuccessPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/JunitTest.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/JunitTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/LoginPage.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/LoginPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/Tool.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/Tool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BasePage.java" afterPath="$PROJECT_DIR$/src/BasePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project_automation2/Q11.class" afterPath="$PROJECT_DIR$/out/production/project_automation2/Q11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/dataBase/testdata.xls" afterPath="$PROJECT_DIR$/lib/dataBase/testdata.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JunitTest.java" afterPath="$PROJECT_DIR$/src/JunitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Q11.java" afterPath="$PROJECT_DIR$/src/Q11.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tool.java" afterPath="$PROJECT_DIR$/src/Tool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project_automation2.iml" afterPath="$PROJECT_DIR$/project_automation2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test.java" afterPath="$PROJECT_DIR$/src/test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ydh_automation2_test.log" afterPath="$PROJECT_DIR$/ydh_automation2_test.log" />
     </list>
@@ -51,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="298" column="26" selection-start-line="298" selection-start-column="26" selection-end-line="298" selection-end-column="26" />
+              <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JunitTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JunitTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JunitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.79569894">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,14 +73,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tool.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20464441">
-              <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+                <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="110" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Q11.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Q11.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/ydh_automation2_test.log">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
+              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -149,12 +164,12 @@
         <option value="$PROJECT_DIR$/src/javapractice/DateStudy.java" />
         <option value="$PROJECT_DIR$/src/log4j_demo.java" />
         <option value="$PROJECT_DIR$/log4j.xml" />
-        <option value="$PROJECT_DIR$/ydh_automation2_test.log" />
         <option value="$PROJECT_DIR$/src/BasePage.java" />
-        <option value="$PROJECT_DIR$/src/JunitTest.java" />
-        <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/Tool.java" />
         <option value="$PROJECT_DIR$/src/Q11.java" />
+        <option value="$PROJECT_DIR$/ydh_automation2_test.log" />
+        <option value="$PROJECT_DIR$/src/Tool.java" />
+        <option value="$PROJECT_DIR$/src/test.java" />
+        <option value="$PROJECT_DIR$/src/JunitTest.java" />
       </list>
     </option>
   </component>
@@ -203,7 +218,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,7 +257,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,7 +274,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Q11">
+  <component name="RunManager" selected="JUnit.JunitTest">
     <configuration default="false" name="BasePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="BasePage" />
@@ -600,9 +615,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Q11" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JunitTest" />
         <item index="1" class="java.lang.String" itemvalue="Application.test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JunitTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Q11" />
         <item index="3" class="java.lang.String" itemvalue="Application.log4j_demo" />
         <item index="4" class="java.lang.String" itemvalue="Application.BasePage" />
       </list>
@@ -637,6 +652,7 @@
       <workItem from="1457487917634" duration="8919000" />
       <workItem from="1457572217645" duration="18278000" />
       <workItem from="1457656413957" duration="4702000" />
+      <workItem from="1457668075285" duration="6743000" />
     </task>
     <task id="LOCAL-00001" summary="打印日志操作学习">
       <created>1457406100027</created>
@@ -648,7 +664,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100021000" />
+    <option name="totallyTimeSpent" value="106764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -662,7 +678,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2394822" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22761597" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36893204" sideWeight="0.49574015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18530351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -747,7 +763,7 @@
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -784,7 +800,7 @@
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -821,7 +837,7 @@
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -858,7 +874,7 @@
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -895,7 +911,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -932,7 +948,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -969,7 +985,7 @@
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
           </folding>
         </state>
       </provider>
@@ -1081,24 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ydh_automation2_test.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="60" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="26" selection-start-line="298" selection-start-column="26" selection-end-line="298" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1107,20 +1105,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JunitTest.java">
+    <entry file="file://$PROJECT_DIR$/src/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="293" column="0" selection-start-line="293" selection-start-column="0" selection-end-line="293" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ydh_automation2_test.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Q11.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84179974">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="44" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -1130,19 +1136,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16545719">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="110" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20464441">
-          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1457659446338" expanded="true" signature="3246:3439" placeholder="SELECT t.fac..t_active_code..." />
+            <marker date="1457679547349" expanded="true" signature="4626:4819" placeholder="SELECT t.fac..t_active_code..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JunitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79569894">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
