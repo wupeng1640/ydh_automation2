@@ -1,3 +1,6 @@
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,6 +15,9 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.io.*;
+
+import org.apache.poi.xssf.usermodel.*;
 
 /**
  * @author 深圳依云科技测试组
@@ -81,7 +87,7 @@ public class Tool {
 /**
  * @author 铱云测试组
  * @time 2015年12月3日
- * @see 实现从200测试环境数据库获取到随机手机号码的手机短信验证码
+ * 实现从200测试环境数据库获取到随机手机号码的手机短信验证码
  */
 class DBread {
     public static final String url = "jdbc:mysql://192.168.1.200/platform";
@@ -134,6 +140,58 @@ class DBread {
             this.pst.close();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+}
+
+
+class Excelutils {
+    private XSSFSheet ExcelWSheet;
+    private XSSFWorkbook ExcelWBook;
+
+    //Constructor to connect to the Excel with sheetname and Path
+    public String  getStringData(String Path, String SheetName,int lineNumb,int rowNumb) throws Exception {
+        try {
+            // Open the Excel file
+            FileInputStream ExcelFile = new FileInputStream(Path);
+            // Access the required test data sheet
+
+            ExcelWSheet = ExcelWBook.getSheet(SheetName);
+            //HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(Path));
+            //HSSFSheet ExcelWSheet = workbook.getSheetAt(0);
+
+
+
+
+            XSSFCell cell = ExcelWSheet.getRow(rowNumb).getCell(lineNumb);
+            String data=cell.getStringCellValue();
+            return data;
+        } catch (Exception e) {
+            throw (e);
+        }
+    }
+
+
+    //This method to get the data and get the value as strings.
+    public String getCellDataasstring(int RowNum, int ColNum) throws Exception {
+        try {
+            String CellData = ExcelWSheet.getRow(RowNum).getCell(ColNum).getStringCellValue();
+            System.out.println("The value of CellData " + CellData);
+            return CellData;
+        } catch (Exception e) {
+            return "Errors in Getting Cell Data";
+        }
+    }
+
+
+    //This method to get the data and get the value as number.
+    public double getCellDataasnumber(int RowNum, int ColNum) throws Exception {
+        try {
+            double CellData = ExcelWSheet.getRow(RowNum).getCell(ColNum).getNumericCellValue();
+            System.out.println("The value of CellData " + CellData);
+            return CellData;
+        } catch (Exception e) {
+            return 000.00;
         }
     }
 }
