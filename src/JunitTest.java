@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by Administrator on 2016/3/7.
@@ -34,7 +33,20 @@ public class JunitTest {
     }
 
     @Test
-    public void test() throws Exception {
+    public void test1() throws Exception {
+        // enrollPage = loginPage.linkPage();
+        // enrollPage2=enrollPage.firstSubmit("18600011116");
+        // enrollSuccessPage = enrollPage2.secondSubmit("测试的--公司", "联系人", "123456", "12345678@qq.com");
+        // enrollSuccessPage.LinkAdminPage();
+        //enrollPage.firstSubmit("18607099140");
+
+        adminBasePage = loginPage.login(tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",2,0), tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",1,1));
+//        productListPage = adminBasePage.linkProductList();
+//        addNewProductPage = productListPage.linkNewProduct();
+//        productListPage=addNewProductPage.addNewProduct("ceshi_1110e25222", "25", "10");
+    }
+    @Test
+    public void test2() throws Exception {
         // enrollPage = loginPage.linkPage();
         // enrollPage2=enrollPage.firstSubmit("18600011116");
         // enrollSuccessPage = enrollPage2.secondSubmit("测试的--公司", "联系人", "123456", "12345678@qq.com");
@@ -44,9 +56,8 @@ public class JunitTest {
         adminBasePage = loginPage.login(tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",2,0), tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",1,1));
         productListPage = adminBasePage.linkProductList();
         addNewProductPage = productListPage.linkNewProduct();
-        productListPage=addNewProductPage.addNewProduct("ceshi_1110e25", "25", "10");
+        productListPage=addNewProductPage.addNewProduct("ceshi_1122", "25", "10");
     }
-
     @After
     public void tearDown() {
         driver.close();
