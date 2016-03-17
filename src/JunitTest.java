@@ -56,7 +56,7 @@ public class JunitTest {
         adminBasePage = loginPage.login(tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",2,0), tool.getExeclData("E:/ydh_automation2/lib/dataBase/testdata.xls","loginSheet",1,1));
         productListPage = adminBasePage.linkProductList();
         addNewProductPage = productListPage.linkNewProduct();
-        productListPage=addNewProductPage.addNewProduct("ceshi_1122", "25", "10");
+        productListPage=addNewProductPage.addNewProduct("ceshi_12222", "25", "10");
     }
     @After
     public void tearDown() {
