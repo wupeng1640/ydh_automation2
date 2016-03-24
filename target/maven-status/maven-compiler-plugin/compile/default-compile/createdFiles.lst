@@ -1,0 +1,15 @@
+com\ydh_automatin2\ProductListPage.class
+com\ydh_automatin2\DBread.class
+com\ydh_automatin2\EnrollPage1.class
+com\ydh_automatin2\LoginPage.class
+com\ydh_automatin2\Q11.class
+com\ydh_automatin2\EnrollPage2.class
+com\ydh_automatin2\AdminBasePage.class
+com\ydh_automatin2\log4j_demo.class
+com\ydh_automatin2\BasePage.class
+com\ydh_automatin2\test.class
+com\ydh_automatin2\Tool.class
+com\ydh_automatin2\SendMail.class
+com\ydh_automatin2\FileUtils.class
+com\ydh_automatin2\AddNewProductPage.class
+com\ydh_automatin2\EnrollSuccessPage.class
